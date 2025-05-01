@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CodeCampus Resources</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fd;
+      color: #1e293b;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Layout containers */
+    .app-container {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      background-color: #ffffff;
+      padding: 24px 16px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    .logo-text {
+      font-size: 24px;
+      font-weight: 700;
+      color: #3a56e8;
+      margin-bottom: 40px;
+    }
+
+    .sidebar-nav .nav-item {
+      margin-bottom: 16px;
+      font-size: 16px;
+      color: #4b5563;
+      padding: 10px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .nav-item.active,
+    .nav-item:hover {
+      background-color: #3a56e8;
+      color: #ffffff;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 240px;
+      right: 0;
+      height: 64px;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 32px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+      z-index: 100;
+    }
+
+    .user-menu {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .user-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 9999px;
+    }
+
+    /* Main content area */
+    .main-content {
+      margin-left: 240px;
+      margin-top: 64px;
+      padding: 40px 32px;
+    }
+
+    .main-content h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    .resource-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .resource-card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .resource-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .resource-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .resource-card p {
+      font-size: 14px;
+      color: #4b5563;
+      margin-bottom: 16px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .tag.pdf {
+      background-color: #f43f5e;
+    }
+
+    .tag.notes {
+      background-color: #6366f1;
+    }
+
+    .tag.roadmap {
+      background-color: #10b981;
+    }
+
+    .tag.video {
+      background-color: #0ea5e9;
+    }
+
+    .start-btn {
+      background-color: #3a56e8;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .start-btn:hover {
+      background-color: #2a46d8;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+
+      header {
+        left: 0;
+      }
+
+      .main-content {
+        margin-left: 0;
+        margin-top: 64px;
+        padding: 20px;
+      }
+
+      .resource-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo-text">CodeCampus</div>
+      <nav class="sidebar-nav">
+        <div class="nav-item">Dashboard</div>
+        <div class="nav-item active">Resources</div>
+        <div class="nav-item">Tests</div>
+        <div class="nav-item">Leaderboard</div>
+      </nav>
+    </aside>
+
+    <!-- Header -->
+    <header>
+      <div></div> <!-- Placeholder for left spacing -->
+      <div class="user-menu">
+        <span>Hi, Alex</span>
+        <img class="user-avatar" src="https://i.pravatar.cc/40" alt="User avatar" />
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <h2>Developer Resources</h2>
+      <div class="resource-list">
+        <div class="resource-card">
+          <h3>DSA Cheat Sheet</h3>
+          <span class="tag pdf">PDF</span>
+          <p>Quick reference for major data structures and algorithms.</p>
+          <button class="start-btn">Download</button>
+        </div>
+
+        <div class="resource-card">
+          <h3>React Roadmap</h3>
+          <span class="tag roadmap">Roadmap</span>
+          <p>A structured path to becoming a frontend React developer.</p>
+          <button class="start-btn">Open Guide</button>
+        </div>
+
+        <div class="resource-card">
+          <h3>System Design Notes</h3>
+          <span class="tag notes">Notes</span>
+          <p>Concise explanation of high-level architecture concepts.</p>
+          <button class="start-btn">Download</button>
+        </div>
+
+        <div class="resource-card">
+          <h3>Git & GitHub Tutorial</h3>
+          <span class="tag video">Video</span>
+          <p>Step-by-step tutorial on using Git for version control.</p>
+          <button class="start-btn">Watch Now</button>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

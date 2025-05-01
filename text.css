@@ -1,0 +1,671 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Poppins', sans-serif;
+  background: #F8F9FD;
+  /* Ensure body/html take up height for absolute positioning context */
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.app-container {
+  /* Adjusted to be relative and fit viewport better than fixed size */
+  position: relative;
+  width: 100%;
+  min-height: 100%; /* Use min-height */
+  /* Removed fixed height/width */
+  left: 0px;
+  top: 0px;
+  background: #F8F9FD;
+  border-radius: 0px;
+}
+
+/* Header */
+header {
+  position: absolute; /* Keep absolute as per original CSS */
+  width: 100%; /* Use 100% width */
+  height: 64px;
+  left: 0px;
+  top: 0px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 0px;
+  z-index: 10; /* Ensure header is above sidebar */
+}
+
+.header-container {
+  /* Centering the container might be better */
+  position: relative; /* Change from absolute */
+  /* width: 1280px; */ /* Use max-width and margin for centering */
+  max-width: 1280px;
+  height: 64px;
+  margin: 0 auto; /* Center the container */
+  padding: 0 16px; /* Add padding */
+  /* Removed left/top */
+  border-radius: 0px;
+  display: flex; /* Use flex for alignment */
+  align-items: center; /* Vertically center */
+}
+
+.header-content {
+  /* Simplified as header-container is now flex */
+  position: relative; /* Change from absolute */
+  width: 100%; /* Take full width of container */
+  height: auto; /* Auto height */
+  /* Removed left/top */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  /* Simplified positioning */
+  position: relative; /* Change from absolute */
+  width: auto; /* Adjust width */
+  height: auto;
+  /* Removed left/top */
+  border-radius: 0px;
+}
+
+.logo-text {
+  /* Simplified positioning */
+  position: relative; /* Change from absolute */
+  width: auto;
+  height: auto;
+  /* Removed left/top */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #3A56E8;
+}
+
+.user-menu {
+  /* Simplified positioning */
+  position: relative; /* Change from absolute */
+  width: auto; /* Auto width */
+  height: 32px;
+  /* Removed left/top */
+  display: flex; /* Use flex */
+  align-items: center;
+  gap: 15px; /* Add gap */
+}
+
+.notification-icon {
+  /* Simplified positioning */
+  position: relative; /* Change from absolute */
+  width: auto; /* Auto width/height */
+  height: auto;
+  /* Removed right/top */
+  display: flex; /* Added */
+  align-items: center; /* Added */
+}
+
+.notification-badge {
+  /* Position relative to icon */
+  position: absolute; /* Keep absolute */
+  width: 16px;
+  height: 16px;
+  /* Adjusted positioning */
+  left: 10px;
+  top: -6px;
+  background: #FF4B4B;
+  border-radius: 9999px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px; /* Adjusted line-height */
+  color: #FFFFFF;
+  text-align: center;
+  display: flex; /* Center text */
+  align-items: center; /* Center text */
+  justify-content: center; /* Center text */
+}
+
+.user-avatar {
+  /* Simplified positioning */
+  position: relative; /* Change from absolute */
+  width: 32px;
+  height: 32px;
+  /* Removed left/top */
+  border-radius: 9999px;
+  display: block; /* Added */
+}
+
+/* Main Content Area - Container for Sidebar and Dashboard */
+.main-content {
+  position: relative; /* Changed from absolute */
+  padding-top: 64px; /* Account for header height */
+  /* Removed fixed width/height */
+  width: 100%;
+  min-height: calc(100vh - 64px); /* Fill remaining height */
+  display: flex; /* Use flex to position sidebar and dashboard */
+}
+
+/* Sidebar */
+.sidebar {
+  position: relative; /* Changed from absolute */
+  width: 256px; /* Keep fixed width */
+  /* height: 1376px; */ /* Remove fixed height, use flex height */
+  height: calc(100vh - 64px); /* Fill height */
+  /* Removed left/top */
+  background: #FFFFFF;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 0px;
+  display: flex; /* Use flex */
+  flex-direction: column; /* Stack nav and platforms */
+  padding: 16px; /* Add padding */
+  overflow-y: auto; /* Allow scrolling */
+}
+
+.sidebar-nav {
+  position: relative; /* Change from absolute */
+  width: 100%; /* Use full width */
+  /* height: 232px; */ /* Remove fixed height */
+  /* Removed left/top */
+  border-radius: 0px;
+  flex-grow: 1; /* Allow nav to grow */
+  display: flex; /* Added */
+  flex-direction: column; /* Added */
+  gap: 8px; /* Added gap between items */
+}
+
+.nav-item {
+  /* Adjust positioning */
+  position: relative; /* Change from absolute */
+  width: 100%; /* Use full width */
+  height: 40px;
+  border-radius: 8px;
+  display: flex; /* Use flex */
+  align-items: center; /* Vertically center */
+  padding: 0 16px; /* Add padding */
+  text-decoration: none; /* Remove underline from links */
+  color: #4B5563; /* Default text color */
+  gap: 12px; /* Gap between icon and text */
+}
+
+.nav-item.active {
+  background: #3A56E8;
+  color: #FFFFFF; /* Active text color */
+}
+
+ .nav-item.active svg path { /* Style active icon */
+    fill: #FFFFFF;
+ }
+
+/* Removed absolute positioning for nav-items */
+/* .nav-item:nth-child(1) ... */
+
+.nav-icon, .frame { /* Combined icon styles */
+   position: relative; /* Change from absolute */
+   width: 18px;
+   height: 16px;
+   /* Removed left/top */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-shrink: 0; /* Prevent icon shrinking */
+}
+
+.nav-text, .nav-item span { /* Combined text styles */
+   position: relative; /* Change from absolute */
+   /* width: 90px; */ /* Remove fixed width */
+   height: auto;
+   /* Removed left/top */
+   font-family: 'Poppins';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 15px; /* Slightly smaller */
+   line-height: 20px; /* Adjust line height */
+   color: inherit; /* Inherit color from .nav-item */
+   white-space: nowrap; /* Prevent wrapping */
+   overflow: hidden; /* Hide overflow */
+   text-overflow: ellipsis; /* Add ellipsis */
+}
+
+/* Ensure link inside nav-item fills space */
+ .nav-item a {
+     display: flex;
+     align-items: center;
+     text-decoration: none;
+     color: inherit;
+     width: 100%;
+     height: 100%;
+     gap: 12px; /* Match nav-item gap */
+ }
+ .nav-item a span {
+    /* Styles applied via .nav-text, .nav-item span */
+    line-height: 1; /* Adjust link span line-height if needed */
+ }
+
+
+/* Removed specific :not(.active) styles, handled by inheritance */
+
+.vector { /* SVG styles */
+   /* Removed absolute positioning */
+   display: block; /* Ensure SVG behaves like a block */
+   max-width: 100%;
+   max-height: 100%;
+}
+
+
+/* Connected Platforms */
+.connected-platforms {
+   position: relative; /* Change from absolute */
+   width: 100%; /* Use full width */
+   /* height: 136px; */ /* Remove fixed height */
+   /* Removed left/top */
+   border-radius: 0px;
+   margin-top: 24px; /* Add margin */
+   padding-top: 16px; /* Add padding */
+   border-top: 1px solid #e0e0e0; /* Add separator */
+}
+
+.connected-platforms h3 {
+   position: relative; /* Change from absolute */
+   /* width: 152px; */ /* Remove fixed width */
+   width: auto;
+   height: auto;
+   /* Removed left/top */
+   font-family: 'Poppins';
+   font-style: normal;
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 20px; /* Adjusted line height */
+   color: #4B5563;
+   margin-bottom: 12px; /* Add margin */
+}
+
+.platforms-list {
+   position: relative; /* Change from absolute */
+   width: 100%;
+   /* height: 100px; */ /* Remove fixed height */
+   /* Removed left/top */
+   border-radius: 0px;
+   display: flex; /* Use flex */
+   flex-direction: column; /* Stack platforms */
+   gap: 12px; /* Add gap */
+}
+
+.platform {
+  position: relative; /* Change from absolute */
+  width: 100%;
+  height: 44px;
+  /* Removed background/border from default - apply to specific */
+  border-radius: 8px;
+  display: flex; /* Use flex */
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px; /* Add padding */
+  border: 1px solid #e0e0e0; /* Default border */
+  background: #FFFFFF; /* Default background */
+}
+
+/* Removed absolute positioning for platform items */
+/* .platform:nth-child(1)... */
+
+/* Specific platform styling from original HTML/CSS */
+.platform.leetcode {
+    /* Add styles if needed */
+    border-color: #e0e0e0; /* Example */
+}
+.platform.gfg {
+    background: #e0f8e6; /* Light green from original */
+    border: 1px solid #2F8D46; /* Green border */
+}
+.platform.gfg .platform-info span{
+     color: #1e4629; /* Darker green text */
+}
+.platform.gfg .platform-status {
+     color: #25D366;
+}
+
+
+.platform-info {
+   position: relative; /* Change from absolute */
+   /* Removed left/top */
+   border-radius: 0px;
+   display: flex; /* Use flex */
+   align-items: center;
+   gap: 8px; /* Add gap */
+}
+ .platform-info .frame { /* Icon container */
+     width: 20px;
+     height: 20px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+  .platform-info .frame svg { /* Icon size */
+     width: 16px;
+     height: 16px;
+ }
+
+
+.platform-info span { /* Platform name */
+  position: relative; /* Change from absolute */
+  /* Removed left/top */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500; /* Make slightly bolder */
+  font-size: 14px;
+  line-height: 20px; /* Adjusted */
+  color: #333; /* Darker text */
+}
+
+.platform-status {
+   position: relative; /* Change from absolute */
+   width: auto; /* Auto width */
+   height: auto;
+   /* Removed left/top */
+   font-family: 'Poppins';
+   font-style: normal;
+   font-weight: 500; /* Make bolder */
+   font-size: 12px;
+   line-height: 18px;
+   color: #25D366; /* Default connected color */
+}
+
+/* Dashboard Area */
+/* This is where the Coding Test content will go */
+.dashboard {
+   position: relative; /* Change from absolute */
+   /* width: 1184px; */ /* Take remaining width */
+   flex: 1; /* Allow dashboard to grow */
+   /* height: 660px; */ /* Remove fixed height */
+   height: calc(100vh - 64px); /* Fill height */
+   /* Removed left/top */
+   border-radius: 0px;
+   padding: 24px; /* Add padding */
+   overflow-y: auto; /* Allow scrolling */
+   background: #F8F9FD; /* Match body background */
+}
+
+/* --- Styles for Coding Test Content (Copied from previous version) --- */
+/* --- These styles need to work within the .dashboard container --- */
+
+.page-header {
+    margin-bottom: 20px; /* Adjust margin */
+}
+
+.page-title {
+    font-size: 24px; /* Adjust size */
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 4px; /* Adjust margin */
+}
+
+.page-subtitle {
+    color: #4a5568;
+    font-size: 15px; /* Adjust size */
+    margin-bottom: 24px; /* Adjust margin */
+}
+
+.upcoming-test-section {
+     margin-bottom: 30px;
+}
+
+.upcoming-test-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.upcoming-test-title {
+    font-size: 18px; /* Adjust size */
+    font-weight: 600;
+    color: #1a202c;
+}
+
+.view-all {
+    color: #3A56E8; /* Match theme color */
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+}
+.view-all:hover {
+    text-decoration: underline;
+}
+
+
+.upcoming-test {
+    background-color: #FFFFFF; /* White background */
+    border: 1px solid #e0e0e0; /* Add border */
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+     gap: 20px;
+     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05); /* Add subtle shadow */
+}
+
+
+.test-details h3 {
+    font-size: 16px; /* Adjust size */
+    margin-bottom: 8px; /* Adjust margin */
+    color: #1a202c;
+    font-weight: 600;
+}
+
+.test-time {
+    display: flex;
+    align-items: center;
+    color: #4a5568;
+    font-size: 14px;
+    margin-bottom: 0; /* Remove margin if details are compact */
+}
+
+.test-time i {
+    margin-right: 8px;
+     font-style: normal;
+     font-size: 15px;
+     color: #3A56E8; /* Match theme */
+}
+
+.countdown {
+    display: flex;
+    gap: 10px;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F8F9FD; /* Lighter background */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 8px 12px; /* Adjust padding */
+    min-width: 60px; /* Adjust width */
+}
+
+.countdown-value {
+    font-size: 22px; /* Adjust size */
+    font-weight: 700;
+    color: #3A56E8;
+}
+
+.countdown-label {
+    font-size: 11px; /* Adjust size */
+    color: #4a5568;
+    margin-top: 2px;
+    text-transform: uppercase;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 6px 16px; /* Adjust padding */
+    border-radius: 20px;
+    border: 1px solid #d1d5db; /* Slightly darker border */
+    background-color: #FFFFFF;
+    cursor: pointer;
+    font-size: 13px; /* Adjust size */
+    font-weight: 500;
+    color: #4b5563;
+     transition: all 0.2s ease;
+}
+ .filter-btn:hover {
+     border-color: #9ca3af;
+     background-color: #f9fafb;
+ }
+
+
+.filter-btn.active {
+    background-color: #3A56E8;
+    color: white;
+    border-color: #3A56E8;
+}
+ .filter-btn.active:hover {
+     background-color: #314ac3; /* Darker active hover */
+     border-color: #314ac3;
+ }
+
+
+.tests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjust minmax */
+    gap: 20px;
+}
+
+.test-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0e0e0;
+     display: flex;
+     flex-direction: column;
+}
+ .test-card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px; /* Space before button */
+ }
+
+
+.test-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px; /* Adjust margin */
+}
+
+.test-card-title {
+    font-size: 16px; /* Adjust size */
+    font-weight: 600;
+    color: #1a202c;
+}
+ .test-card h4 { /* Problem title */
+     font-size: 15px; /* Adjust size */
+     font-weight: 500;
+     margin-bottom: 12px;
+     color: #374151;
+     line-height: 1.4;
+ }
+
+
+.difficulty {
+    padding: 3px 10px; /* Adjust padding */
+    border-radius: 20px;
+    font-size: 11px; /* Adjust size */
+    font-weight: 600; /* Bolder */
+    text-transform: uppercase;
+     letter-spacing: 0.5px;
+     border: 1px solid transparent;
+}
+
+.difficulty.easy {
+    background-color: #ECFDF5;
+    color: #059669;
+     border-color: #A7F3D0;
+}
+
+.difficulty.medium {
+    background-color: #FFFBEB; /* Lighter yellow */
+    color: #B45309; /* Darker yellow/brown */
+    border-color: #FDE68A; /* Yellow border */
+}
+ .difficulty.hard {
+     background-color: #FEF2F2;
+     color: #B91C1C; /* Darker red */
+     border-color: #FECACA;
+ }
+
+
+.test-card-info {
+    display: flex;
+    align-items: center;
+    color: #4a5568;
+    font-size: 13px; /* Adjust size */
+    margin-bottom: 8px; /* Adjust margin */
+}
+
+
+.test-card-info i {
+    margin-right: 8px;
+    font-size: 14px; /* Adjust icon size */
+     color: #9ca3af;
+     font-style: normal;
+     width: 16px;
+     text-align: center;
+     flex-shrink: 0;
+}
+
+.test-card-info.topics {
+    margin-bottom: 12px; /* Adjust margin */
+}
+
+.test-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #3A56E8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px; /* Adjust size */
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    margin-top: auto; /* Push button to bottom */
+     transition: background-color 0.2s ease;
+}
+.test-btn:hover {
+    background-color: #314ac3; /* Darker blue on hover */
+}
+
+/* Responsive Adjustments (Simplified) */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none; /* Hide sidebar on small screens for simplicity */
+        /* Alternative: Implement a toggle mechanism */
+    }
+    .dashboard {
+        width: 100%; /* Dashboard takes full width */
+        padding: 16px; /* Adjust padding */
+         height: calc(100vh - 64px); /* Adjust height */
+    }
+     .header-container {
+         padding: 0 16px; /* Adjust header padding */
+     }
+    .tests-grid {
+        grid-template-columns: 1fr; /* Single column */
+    }
+}
+

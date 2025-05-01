@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeCampus Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header>
+      <div class="header-container">
+        <div class="header-content">
+          <div class="logo">
+            <div class="logo-text">CodeCampus</div>
+          </div>
+          <div class="user-menu">
+            <div class="notification-icon">
+              <div class="frame">
+                <svg class="vector" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 20C9.1 20 10 19.1 10 18H6C6 19.1 6.9 20 8 20ZM14 14V9C14 5.93 12.36 3.36 9.5 2.68V2C9.5 1.17 8.83 0.5 8 0.5C7.17 0.5 6.5 1.17 6.5 2V2.68C3.63 3.36 2 5.92 2 9V14L0 16V17H16V16L14 14Z" fill="#4B5563"/>
+                </svg>
+              </div>
+              <span class="notification-badge">3</span>
+            </div>
+            <img class="user-avatar" src="profile-image.jpg" alt="User avatar">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <nav class="sidebar-nav">
+          <div class="nav-item active">
+            <i class="nav-icon">
+              <svg class="vector" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 14H2V9H7V14ZM16 14H11V9H16V14ZM7 7H2V2H7V7ZM16 7H11V2H16V7Z" fill="#FFFFFF"/>
+              </svg>
+            </i>
+            <span class="nav-text">Dashboard</span>
+          </div>
+          <div class="nav-item">
+            <div class="frame">
+              <svg class="vector" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 0H2C0.9 0 0 0.9 0 2V14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM16 14H4V12H16V14ZM16 11H4V8H16V11ZM16 7H4V4H16V7Z" fill="#4B5563"/>
+              </svg>
+            </div>
+           <a href="test.html"> <span>Tests</span> </a>
+          </div>
+          <div class="nav-item">
+            <div class="frame">
+              <svg class="vector" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 0H2C0.9 0 0 0.9 0 2V16L4 12H12C13.1 12 14 11.1 14 10V2C14 0.9 13.1 0 12 0Z" fill="#4B5563"/>
+              </svg>
+            </div>
+            <span>Resources</span>
+          </div>
+          <div class="nav-item">
+            <div class="frame">
+              <svg class="vector" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 3.5C6 4.33 5.33 5 4.5 5C3.67 5 3 4.33 3 3.5C3 2.67 3.67 2 4.5 2C5.33 2 6 2.67 6 3.5ZM11.5 2C10.67 2 10 2.67 10 3.5C10 4.33 10.67 5 11.5 5C12.33 5 13 4.33 13 3.5C13 2.67 12.33 2 11.5 2ZM4 7C2.34 7 0 7.83 0 9.5V11H8V9.5C8 7.83 5.66 7 4 7ZM11.5 7C11.04 7 10.54 7.06 10.06 7.16C10.8 7.83 11 8.64 11 9.5V11H16V9.5C16 7.83 13.66 7 11.5 7Z" fill="#4B5563"/>
+              </svg>
+            </div>
+            <span>Leaderboard</span>
+          </div>
+          <div class="nav-item">
+            <div class="frame">
+              <svg class="vector" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17 2H14V0H4V2H1C0.45 2 0 2.45 0 3V4C0 4.55 0.45 5 1 5H17C17.55 5 18 4.55 18 4V3C18 2.45 17.55 2 17 2ZM14 2H4V0H14V2ZM16 6H2C1.45 6 1 6.45 1 7V15C1 15.55 1.45 16 2 16H16C16.55 16 17 15.55 17 15V7C17 6.45 16.55 6 16 6Z" fill="#4B5563"/>
+              </svg>
+            </div>
+            <span>Roadmaps</span>
+          </div>
+        </nav>
+
+        <div class="connected-platforms">
+          <h3>Connected Platforms</h3>
+          <div class="platforms-list">
+            <div class="platform">
+              <div class="platform-info">
+                <div class="frame">
+                  <svg class="vector" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 0H2C0.9 0 0 0.9 0 2V14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0Z" fill="#3A56E8"/>
+                  </svg>
+                </div>
+                <span>LeetCode</span>
+              </div>
+              <span class="platform-status">Connected</span>
+            </div>
+            <div class="platform">
+              <div class="platform-info">
+                <div class="frame">
+                  <svg class="vector" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 0L0 4V12L7 16L14 12V4L7 0Z" fill="#3A56E8"/>
+                  </svg>
+                </div>
+                <span>GeeksForGeeks</span>
+              </div>
+              <span class="platform-status">Connected</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Dashboard -->
+      <main class="dashboard">
+        <div class="dashboard-header">
+          <div class="welcome-message">
+            <h1>Welcome back, Alex!</h1>
+            <p>Keep up the great work! You're on a 7-day streak.</p>
+          </div>
+        </div>
+
+        <div class="top-widgets">
+          <div class="problem-card">
+            <div class="card-header">
+              <h2>Problem of the Day</h2>
+              <span class="difficulty-tag">Medium</span>
+            </div>
+            <h3 class="problem-title">Binary Tree Maximum Path Sum</h3>
+            <p class="problem-description">Find the path with the maximum sum in a binary tree...</p>
+            <button class="solve-button">Solve Now</button>
+          </div>
+
+          <div class="deadlines-card">
+            <h2>Upcoming Deadlines</h2>
+            <div class="deadlines-list">
+              <div class="deadline-item">
+                <div class="deadline-date blue">
+                  <span>23</span>
+                </div>
+                <div class="deadline-info">
+                  <h4>DSA Test</h4>
+                  <p>2:30 PM</p>
+                </div>
+              </div>
+              <div class="deadline-item">
+                <div class="deadline-date orange">
+                  <span>25</span>
+                </div>
+                <div class="deadline-info">
+                  <h4>Project Submission</h4>
+                  <p>11:59 PM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom-widgets">
+          <div class="progress-card">
+            <h2>Weekly Progress</h2>
+            <div class="progress-chart">
+              <div class="chart-bar" style="height: 115.19px;"></div>
+              <div class="chart-bar" style="height: 76.8px;"></div>
+              <div class="chart-bar" style="height: 153.59px;"></div>
+              <div class="chart-bar" style="height: 57.59px;"></div>
+              <div class="chart-bar" style="height: 134.39px;"></div>
+              <div class="chart-bar active" style="height: 172.8px;"></div>
+              <div class="chart-bar" style="height: 96px;"></div>
+            </div>
+          </div>
+
+          <div class="performers-card">
+            <h2>Top Performers</h2>
+            <div class="performers-list">
+              <div class="performer-item">
+                <div class="performer-rank blue">#1</div>
+                <img class="performer-avatar" src="user1.jpg" alt="John Doe">
+                <div class="performer-name">John Doe</div>
+                <div class="performer-points">450 points</div>
+              </div>
+              <div class="performer-item">
+                <div class="performer-rank orange">#2</div>
+                <img class="performer-avatar" src="user2.jpg" alt="Sarah Smith">
+                <div class="performer-name">Sarah Smith</div>
+                <div class="performer-points">425 points</div>
+              </div>
+              <div class="performer-item">
+                <div class="performer-rank green">#3</div>
+                <img class="performer-avatar" src="user3.jpg" alt="Mike Johnson">
+                <div class="performer-name">Mike Johnson</div>
+                <div class="performer-points">410 points</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

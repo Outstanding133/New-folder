@@ -1,0 +1,180 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F9FAFB;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  background-color: #3A56E8;
+  color: white;
+  padding: 20px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+}
+
+.notification-icon {
+  position: relative;
+  margin-right: 20px;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #4B5563;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-item.active {
+  background-color: #3A56E8;
+}
+
+.nav-icon {
+  margin-right: 10px;
+}
+
+.connected-platforms {
+  margin-top: 20px;
+}
+
+.platforms-list {
+  margin-top: 10px;
+}
+
+.platform {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #3A56E8;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.dashboard {
+  flex: 1;
+  padding: 20px;
+}
+
+.dashboard-header {
+  margin-bottom: 20px;
+}
+
+.welcome-message h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.top-widgets {
+  display: flex;
+  justify-content: space-between;
+}
+
+.problem-card, .deadlines-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  margin-right: 20px;
+}
+
+.problem-card:last-child, .deadlines-card:last-child {
+  margin-right: 0;
+}
+
+.bottom-widgets {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.progress-card, .performers-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  margin-right: 20px;
+}
+
+.progress-card:last-child, .performers-card:last-child {
+  margin-right: 0;
+}
+
+.chart-bar {
+  width: 100%;
+  background-color: #3A56E8;
+  margin: 5px 0;
+}
+
+.performers-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.performer-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.performer-rank {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.performer-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
