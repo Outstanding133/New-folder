@@ -591,14 +591,14 @@ header {
 }
 
 .difficulty.easy {
-    background-color: #ECFDF5;
-    color: #059669;
+    background-color: #059669;
+    color: #A7F3D0;
      border-color: #A7F3D0;
 }
 
 .difficulty.medium {
-    background-color: #FFFBEB; /* Lighter yellow */
-    color: #B45309; /* Darker yellow/brown */
+    background-color: #B45309; /* Lighter yellow */
+    color: #FDE68A; /* Darker yellow/brown */
     border-color: #FDE68A; /* Yellow border */
 }
  .difficulty.hard {
@@ -665,7 +665,7 @@ header {
          padding: 0 16px; /* Adjust header padding */
      }
     .tests-grid {
-        grid-template-columns: 1fr; /* Single column */
+        grid-template-columns: 1fr; 
     }
 }
 

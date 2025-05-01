@@ -3,14 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body, html {
   font-family: 'Poppins', sans-serif;
   background: #F8F9FD;
 }
-
 .app-container {
-  /* Adjusted to be relative and fit viewport better than fixed size */
   position: absolute;
   width: 100vw;
   min-height: 100%; /* Use min-height */
@@ -32,44 +29,33 @@ header {
   z-index: 10; /* Ensure header is above sidebar */
 }
 .header-container {
-
   position: relative; /* Change from absolute */
   max-width: 1280px;
   height: 64px;
   margin: 0 auto; /* Center the container */
   padding: 0 16px; /* Add padding */
-  /* Removed left/top */
   border-radius: 0px;
   display: flex; /* Use flex for alignment */
   align-items: center; /* Vertically center */
 }
-
 .header-content {
-  /* Simplified as header-container is now flex */
   position: relative; /* Change from absolute */
   width: 100%; /* Take full width of container */
   height: auto; /* Auto height */
-  /* Removed left/top */
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .logo {
-  /* Simplified positioning */
   position: relative; /* Change from absolute */
   width: auto; /* Adjust width */
   height: auto;
-  /* Removed left/top */
   border-radius: 0px;
 }
-
 .logo-text {
-  /* Simplified positioning */
   position: relative; /* Change from absolute */
   width: auto;
   height: auto;
-  /* Removed left/top */
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
@@ -77,34 +63,25 @@ header {
   line-height: 36px;
   color: #3A56E8;
 }
-
 .user-menu {
-  /* Simplified positioning */
   position: relative; /* Change from absolute */
   width: auto; /* Auto width */
   height: 32px;
-  /* Removed left/top */
   display: flex; /* Use flex */
   align-items: center;
   gap: 15px; /* Add gap */
 }
-
 .notification-icon {
-  /* Simplified positioning */
   position: relative; /* Change from absolute */
   width: auto; /* Auto width/height */
   height: auto;
-  /* Removed right/top */
   display: flex; /* Added */
   align-items: center; /* Added */
 }
-
 .notification-badge {
-  /* Position relative to icon */
   position: absolute; /* Keep absolute */
   width: 16px;
   height: 16px;
-  /* Adjusted positioning */
   left: 10px;
   top: -6px;
   background: #FF4B4B;
@@ -120,17 +97,13 @@ header {
   align-items: center; /* Center text */
   justify-content: center; /* Center text */
 }
-
 .user-avatar {
-  /* Simplified positioning */
   position: relative; /* Change from absolute */
   width: 32px;
   height: 32px;
-  /* Removed left/top */
   border-radius: 9999px;
   display: block; /* Added */
 }
-
 /* Main Content Area - Container for Sidebar and Dashboard */
 .main-content {
   position: relative; /* Changed from absolute */
@@ -140,14 +113,12 @@ header {
   min-height: calc(100vh - 64px); /* Fill remaining height */
   display: flex; /* Use flex to position sidebar and dashboard */
 }
-
 /* Sidebar */
 .sidebar {
   position: relative; /* Changed from absolute */
   width: 256px; /* Keep fixed width */
   /* height: 1376px; */ /* Remove fixed height, use flex height */
   height: calc(100vh - 64px); /* Fill height */
-  /* Removed left/top */
   background: #FFFFFF;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
   border-radius: 0px;
@@ -156,7 +127,6 @@ header {
   padding: 16px; /* Add padding */
   overflow-y: auto; /* Allow scrolling */
 }
-
 .sidebar-nav {
   position: relative; /* Change from absolute */
   width: 100%; /* Use full width */
@@ -168,7 +138,6 @@ header {
   flex-direction: column; /* Added */
   gap: 8px; /* Added gap between items */
 }
-
 .nav-item {
   /* Adjust positioning */
   position: relative; /* Change from absolute */
@@ -182,30 +151,22 @@ header {
   color: #4B5563; /* Default text color */
   gap: 12px; /* Gap between icon and text */
 }
-
 .nav-item.active {
   background: #3A56E8;
   color: #FFFFFF; /* Active text color */
 }
-
  .nav-item.active svg path { /* Style active icon */
     fill: #FFFFFF;
  }
-
-/* Removed absolute positioning for nav-items */
-/* .nav-item:nth-child(1) ... */
-
 .nav-icon, .frame { /* Combined icon styles */
    position: relative; /* Change from absolute */
    width: 18px;
    height: 16px;
-   /* Removed left/top */
    display: flex;
    align-items: center;
    justify-content: center;
    flex-shrink: 0; /* Prevent icon shrinking */
 }
-
 .nav-text, .nav-item span { /* Combined text styles */
    position: relative; /* Change from absolute */
    /* width: 90px; */ /* Remove fixed width */
@@ -221,7 +182,6 @@ header {
    overflow: hidden; /* Hide overflow */
    text-overflow: ellipsis; /* Add ellipsis */
 }
-
 /* Ensure link inside nav-item fills space */
  .nav-item a {
      display: flex;
@@ -236,36 +196,24 @@ header {
     /* Styles applied via .nav-text, .nav-item span */
     line-height: 1; /* Adjust link span line-height if needed */
  }
-
-
-/* Removed specific :not(.active) styles, handled by inheritance */
-
-.vector { /* SVG styles */
-   /* Removed absolute positioning */
+.vector { 
    display: block; /* Ensure SVG behaves like a block */
    max-width: 100%;
    max-height: 100%;
 }
-
-
 /* Connected Platforms */
 .connected-platforms {
    position: relative; /* Change from absolute */
-   width: 100%; /* Use full width */
-   /* height: 136px; */ /* Remove fixed height */
-   /* Removed left/top */
+   width: 100%;
    border-radius: 0px;
    margin-top: 24px; /* Add margin */
    padding-top: 16px; /* Add padding */
    border-top: 1px solid #e0e0e0; /* Add separator */
 }
-
 .connected-platforms h3 {
-   position: relative; /* Change from absolute */
-   /* width: 152px; */ /* Remove fixed width */
+   position: relative; 
    width: auto;
    height: auto;
-   /* Removed left/top */
    font-family: 'Poppins';
    font-style: normal;
    font-weight: 600;
@@ -274,23 +222,18 @@ header {
    color: #4B5563;
    margin-bottom: 12px; /* Add margin */
 }
-
 .platforms-list {
    position: relative; /* Change from absolute */
    width: 100%;
-   /* height: 100px; */ /* Remove fixed height */
-   /* Removed left/top */
    border-radius: 0px;
    display: flex; /* Use flex */
    flex-direction: column; /* Stack platforms */
    gap: 12px; /* Add gap */
 }
-
 .platform {
   position: relative; /* Change from absolute */
   width: 100%;
   height: 44px;
-  /* Removed background/border from default - apply to specific */
   border-radius: 8px;
   display: flex; /* Use flex */
   align-items: center;
@@ -299,13 +242,8 @@ header {
   border: 1px solid #e0e0e0; /* Default border */
   background: #FFFFFF; /* Default background */
 }
-
-/* Removed absolute positioning for platform items */
-/* .platform:nth-child(1)... */
-
-/* Specific platform styling from original HTML/CSS */
 .platform.leetcode {
-    /* Add styles if needed */
+ 
     border-color: #e0e0e0; /* Example */
 }
 .platform.gfg {
@@ -318,11 +256,8 @@ header {
 .platform.gfg .platform-status {
      color: #25D366;
 }
-
-
 .platform-info {
    position: relative; /* Change from absolute */
-   /* Removed left/top */
    border-radius: 0px;
    display: flex; /* Use flex */
    align-items: center;
@@ -339,11 +274,8 @@ header {
      width: 16px;
      height: 16px;
  }
-
-
 .platform-info span { /* Platform name */
-  position: relative; /* Change from absolute */
-  /* Removed left/top */
+  position: relative; 
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 500; /* Make slightly bolder */
@@ -351,12 +283,10 @@ header {
   line-height: 20px; /* Adjusted */
   color: #333; /* Darker text */
 }
-
 .platform-status {
    position: relative; /* Change from absolute */
    width: auto; /* Auto width */
    height: auto;
-   /* Removed left/top */
    font-family: 'Poppins';
    font-style: normal;
    font-weight: 500; /* Make bolder */
@@ -364,8 +294,6 @@ header {
    line-height: 18px;
    color: #25D366; /* Default connected color */
 }
-
-
 /* Dashboard */
 .dashboard {
   position: absolute;
@@ -375,7 +303,6 @@ header {
   top: 64px;
   border-radius: 0px;
 }
-
 .dashboard-header {
   position: absolute;
   width: 1136px;
@@ -384,7 +311,6 @@ header {
   top: 24px;
   border-radius: 0px;
 }
-
 .welcome-message {
   position: absolute;
   width: 392px;
@@ -392,7 +318,6 @@ header {
   left: 0px;
   top: 0px;
 }
-
 .welcome-message h1 {
   position: absolute;
   width: 260px;
@@ -406,7 +331,6 @@ header {
   line-height: 24px;
   color: #1E293B;
 }
-
 .welcome-message p {
   position: absolute;
   width: 392px;
@@ -420,7 +344,6 @@ header {
   line-height: 16px;
   color: #4B5563;
 }
-
 /* Top Widgets */
 .top-widgets {
   position: absolute;
@@ -430,7 +353,6 @@ header {
   top: 112px;
   border-radius: 0px;
 }
-
 .problem-card {
   position: absolute;
   width: 749.33px;
@@ -441,7 +363,6 @@ header {
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
   border-radius: 12px;
 }
-
 .card-header {
   position: absolute;
   width: 701.33px;
@@ -450,7 +371,6 @@ header {
   top: 24px;
   border-radius: 0px;
 }
-
 .card-header h2 {
   position: absolute;
   width: 174px;
@@ -464,7 +384,6 @@ header {
   line-height: 18px;
   color: #000000;
 }
-
 .difficulty-tag {
   position: absolute;
   width: 81.81px;
@@ -482,7 +401,6 @@ header {
   text-align: center;
   padding-top: 4px;
 }
-
 .problem-title {
   position: absolute;
   width: 330px;
@@ -496,7 +414,6 @@ header {
   line-height: 30px;
   color: #000000;
 }
-
 .problem-description {
   position: absolute;
   width: 434px;
@@ -510,7 +427,6 @@ header {
   line-height: 24px;
   color: #4B5563;
 }
-
 .solve-button {
   position: absolute;
   width: 114.3px;
@@ -529,7 +445,6 @@ header {
   border: none;
   cursor: pointer;
 }
-
 .deadlines-card {
   position: absolute;
   width: 362.66px;
@@ -540,7 +455,6 @@ header {
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
   border-radius: 12px;
 }
-
 .deadlines-card h2 {
   position: absolute;
   width: 191px;
@@ -554,7 +468,6 @@ header {
   line-height: 27px;
   color: #000000;
 }
-
 .deadlines-list {
   position: absolute;
   width: 314.66px;
@@ -563,22 +476,18 @@ header {
   top: 68px;
   border-radius: 0px;
 }
-
 .deadline-item {
   position: absolute;
   width: 314.66px;
   height: 48px;
   border-radius: 0px;
 }
-
 .deadline-item:nth-child(1) {
   top: 0px;
 }
-
 .deadline-item:nth-child(2) {
   top: 64px;
 }
-
 .deadline-date {
   position: absolute;
   width: 48px;
@@ -589,23 +498,18 @@ header {
   text-align: center;
   padding-top: 12px;
 }
-
 .deadline-date.blue {
   background: rgba(58, 86, 232, 0.1);
 }
-
 .deadline-date.blue span {
   color: #3A56E8;
 }
-
 .deadline-date.orange {
   background: rgba(255, 120, 70, 0.1);
 }
-
 .deadline-date.orange span {
   color: #FF7846;
 }
-
 .deadline-date span {
   font-family: 'Poppins';
   font-style: normal;
@@ -613,13 +517,11 @@ header {
   font-size: 16px;
   line-height: 24px;
 }
-
 .deadline-info {
   position: absolute;
   left: 60px;
   top: 2px;
 }
-
 .deadline-info h4 {
   font-family: 'Poppins';
   font-style: normal;
@@ -629,7 +531,6 @@ header {
   color: #000000;
   margin-bottom: 8px;
 }
-
 .deadline-info p {
   font-family: 'Poppins';
   font-style: normal;
@@ -638,7 +539,6 @@ header {
   line-height: 14px;
   color: #4B5563;
 }
-
 /* Bottom Widgets */
 .bottom-widgets {
   position: absolute;
@@ -648,7 +548,6 @@ header {
   top: 352px;
   border-radius: 0px;
 }
-
 .progress-card {
   position: absolute;
   width: 556px;
@@ -659,7 +558,6 @@ header {
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
   border-radius: 12px;
 }
-
 .progress-card h2 {
   position: absolute;
   width: 152px;
@@ -673,7 +571,6 @@ header {
   line-height: 27px;
   color: #000000;
 }
-
 .progress-chart {
   position: absolute;
   width: 508px;
@@ -684,75 +581,88 @@ header {
   align-items: flex-end;
   justify-content: space-between;
 }
-
 .chart-bar {
   width: 58.86px;
   background: rgba(58, 86, 232, 0.1);
   border-radius: 8px 8px 0px 0px;
 }
-
 .chart-bar.active {
   background: #3A56E8;
 }
-
 .performers-card {
-  position: absolute;
-  width: 556px;
-  height: 284px;
-  left: 580px;
-  top: 0px;
   background: #FFFFFF;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
   border-radius: 12px;
+  padding: 24px;
+  margin: 24px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 500px;
+  /* border: 2px solid black; */
+  position: absolute;
+  left: 600px;
+  margin-top:2px;
+  
 }
 
 .performers-card h2 {
-  position: absolute;
-  width: 140px;
-  height: 25px;
-  left: 24px;
-  top: 25px;
-  font-family: 'Poppins';
-  font-style: normal;
+  font-size: 20px;
   font-weight: 600;
-  font-size: 18px;
-  line-height: 27px;
-  color: #000000;
+  color: #1E293B;
+  margin-bottom: 16px;
 }
 
 .performers-list {
-  position: absolute;
-  width: 508px;
-  height: 128px;
-  left: 24px;
-  top: 68px;
-  border-radius: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .performer-item {
-  position: absolute;
-  width: 508px;
-  height: 32px;
   display: flex;
   align-items: center;
+  padding: 12px;
+  background: #F9FAFB;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s;
 }
-
-.performer-item:nth-child(1) {
-  top: 0px;
-}
-
-.performer-item:nth-child(2) {
-  top: 48px;
-}
-
-.performer-item:nth-child(3) {
-  top: 96px;
+.performer-item:hover {
+  transform: scale(1.02);
 }
 
 .performer-rank {
-  width: 25px;
-  height: 23px;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 700;
-  font- 
+  font-weight: 600;
+  font-size: 16px;
+  margin-right: 16px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  color: #fff;
+}
+.performer-rank.blue { background-color: #3A56E8; }
+.performer-rank.orange { background-color: #FFA500; }
+.performer-rank.green { background-color: #10B981; }
+
+.performer-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 16px;
+}
+
+.performer-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1F2937;
+  flex-grow: 1;
+}
+
+.performer-points {
+  font-size: 14px;
+  color: #6B7280;
+  font-weight: 400;
+}
